@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public Main() {
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите начальное значение факториала: ");
+        int numb = scanner.nextInt();
+        if (numb < 0) {
+            System.out.print("Невозможно определить факториал отрицательного числа");
+        }
+        else {
+            System.out.print("Факториал числа: "+numb+" равен -  " + fact(numb));
+        }
+    }
+    public static long fact(int n){
+        if (n == 0){
+            return 1;
+        }
+        long fact = 1;
+        for (int i = 1; i <= n; i++){
+            fact = fact * i;
+        }
+        return fact;
+    }
+}
